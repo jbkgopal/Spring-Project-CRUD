@@ -1,0 +1,46 @@
+		
+// JSP calling Page Pom.xml Dependency
+
+		<dependency>
+		<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+// application.properties file
+
+spring.mvc.view.prefix=/view/
+spring.mvc.view.suffix=.jsp
+
+
+
+// JSP Page
+// webapp 
+// view
+// h2.jsp page create
+
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+He hiiiiiiiii
+</body>
+</html>
+
+// Java Controller class
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+public class Hello {
+
+	@RequestMapping("tt")
+	public String hello() {
+		return "h2";
+	}
+}
